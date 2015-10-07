@@ -1,0 +1,20 @@
+{
+  "name": "popHealth",
+  "dependencies": {
+    "bootstrap-sass-official": "3.3.5",
+    "ember": "2.1.0",
+    "ember-cli-shims": "ember-cli/ember-cli-shims#0.0.5",
+    "ember-cli-test-loader": "0.2.1",
+    "ember-load-initializers": "ember-cli/ember-load-initializers#0.1.7",
+    "ember-qunit": "0.4.11",
+    "ember-qunit-notifications": "0.0.7",
+    "ember-resolver": "0.1.21",
+    "fontawesome": "4.4.0",
+    "humps": "0.7.0",
+    "jquery": "^1.11.3",
+    "loader.js": "ember-cli/loader.js#3.3.0",
+    "moment": "2.10.6",
+    "numeral": "1.5.3",
+    "qunit": "1.19.0"
+  }
+}

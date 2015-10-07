@@ -1,0 +1,11 @@
+// 3rd party resources
+@import "variables";
+@import "bootstrap3";
+@import "bower_components/fontawesome/scss/font-awesome";
+
+// Styles by page
+@import "login";
+@import "patient";
+@import "register";
+@import "styles";
+@import "vis";

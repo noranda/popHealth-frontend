@@ -1,0 +1,25 @@
+<h1>Everyone forgets.</h1>
+<p>Just enter your email address, and we'll send you a link to reset your password.</p>
+<form {{action "submit" on="submit"}}>
+  <div class="form-group input-group input-group-lg">
+    <span class="input-group-addon"><i class="fa fa-envelope fa-lg fa-fw"></i></span>
+    {{input type="email" value=identification class="form-control" placeholder="email@example.com"}}
+  </div>
+
+  <input class="btn btn-login" type="submit" value="Send" />
+
+  <div class="links">
+    <p>
+      {{#link-to 'users.sign-up'}}
+        <i class="fa fa-plus-circle"></i>
+        register
+      {{/link-to}}
+    </p>
+    <p>
+      {{#link-to 'users.sign-in'}}
+        <i class="fa fa-plus-circle"></i>
+        sign in
+      {{/link-to}}
+    </p>
+  </div>
+</form>

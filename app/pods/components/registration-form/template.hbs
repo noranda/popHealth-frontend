@@ -1,0 +1,144 @@
+<h1>Register</h1>
+
+<form {{action "register" on="submit"}}>
+  {{#if errors.length}}
+    <div class="alert alert-danger">
+      <h2>{{errors.length}} errors prohibited this user from being saved:</h2>
+      <ul>
+        {{#each errors as |error|}}
+          <li>{{error}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  {{/if}}
+
+  <div class="form-group row">
+    <div class="col-md-6">
+      <div class="input-group input-group-lg required">
+        <span class="input-group-addon"><i class="fa fa-user fa-lg fa-fw"></i></span>
+        {{input type="text" class="form-control" value=firstName placeholder="first name*"}}
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="input-group input-group-lg required">
+        <span class="input-group-addon"><i class="fa fa-user fa-lg fa-fw"></i></span>
+        {{input type="text" class="form-control" value=lastName placeholder="last name*"}}
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-md-6">
+      <div class="input-group input-group-lg required">
+        <span class="input-group-addon"><i class="fa fa-user fa-lg fa-fw"></i></span>
+        {{input type="text" class="form-control" value=username placeholder="username*"}}
+      </div>
+      <p class="help-block">Must be at least 3 characters long.</p>
+    </div>
+    <div class="col-md-6">
+      <div class="input-group input-group-lg required">
+        <span class="input-group-addon"><i class="fa fa-envelope fa-lg fa-fw"></i></span>
+        {{input type="email" class="form-control" value=email placeholder="email@example.com*"}}
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-md-6">
+      <div class="input-group input-group-lg required">
+        <span class="input-group-addon"><i class="fa fa-lock fa-lg fa-fw"></i></span>
+        {{input type="password" class="form-control" value=password placeholder="password*"}}
+      </div>
+      <p class="help-block">Must be at least 6 characters long.</p>
+    </div>
+    <div class="col-md-6">
+      <div class="input-group input-group-lg required">
+        <span class="input-group-addon"><i class="fa fa-lock fa-lg fa-fw"></i></span>
+        {{input type="password" class="form-control" value=passwordConfirmation placeholder="confirm password*"}}
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-md-6">
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon"><i class="fa fa-user fa-lg fa-fw"></i></span>
+        {{input type="text" class="form-control" value=company placeholder="company"}}
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon"><i class="fa fa-link fa-lg fa-fw"></i></span>
+        {{input type="text" class="form-control" value=companyUrl placeholder="www.company.com"}}
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-md-6">
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon"><i class="fa fa-h-square fa-lg fa-fw"></i></span>
+        {{input type="text" class="form-control" value=registryName placeholder="registry name"}}
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon"><i class="fa fa-archive fa-lg fa-fw"></i></span>
+        {{input type="text" class="form-control" value=registryId placeholder="registry identifier"}}
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-md-6">
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon"><i class="fa fa-hospital-o fa-lg fa-fw"></i></span>
+        {{input type="text" class="form-control" value=npi placeholder="national provider id"}}
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon"><i class="fa fa-folder fa-lg fa-fw"></i></span>
+        {{input type="text" class="form-control" value=tin placeholder="tax id number"}}
+      </div>
+    </div>
+  </div>
+
+  <div id="termsAndConditions">
+    <p>Performance measures and related data specifications (the "Measures") are copyrighted by the noted quality measure providers as indicated in the applicable Measure. Coding vocabularies are owned by their copyright owners. By using the Measures, a user ("User") agrees to these Terms of Use. Measures are not clinical guidelines and do not establish a standard of medical care and quality measure providers are not responsible for any use of or reliance on the Measures.</p>  <p><strong>THE MEASURES AND SPECIFICATIONS ARE PROVIDED "AS IS" WITHOUT ANY WARRANTY OF ANY KIND, AND ANY AND ALL IMPLIED WARRANTIES ARE HEREBY DISCLAIMED, INCLUDING ANY WARRANTY OF NON-INFRINGEMENT, ACCURACY, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. NO QUALITY MEASURE PROVIDER, NOR ANY OF THEIR TRUSTEES, DIRECTORS, MEMBERS, AFFILIATES, OFFICERS, EMPLOYEES, SUCCESSORS AND/OR ASSIGNS WILL BE LIABLE TO YOU FOR ANY DIRECT, INDIRECT, SPECIAL, EXEMPLARY, INCIDENTAL, PUNITIVE, AND/OR CONSEQUENTIAL DAMAGE OF ANY KIND, IN CONTRACT, TORT OR OTHERWISE, IN CONNECTION WITH THE USE OF THE POPHEALTH TOOL OR THE MEASURES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH LOSS OR DAMAGE. </strong></p>  <p>The Measures are licensed to a User for the limited purpose of using, reproducing and distributing the Measures with the popHealth Tool as delivered to User, without any modification, for commercial and noncommercial uses, but such uses are only permitted if the copies of the Measures contain this complete Copyright, Disclaimer and Terms of Use. Users of the Measures may not alter, enhance, or otherwise modify the Measures.</p>  <p><strong>NOT A CONTRIBUTION</strong> - The Measures, including specifications and coding, as used in the popHealth Tool, are not a contribution under the Apache license. Coding in the Measures is provided for convenience only and necessary licenses for use should be obtained from the copyright owners. Current Procedural Terminology  (CPT<span class="reg">&reg;</span>) &copy; 2004-2010 American Medical Association.  LOINC<span class="reg">&reg;</span> &copy; 2004 Regenstrief Institute, Inc. SNOMED Clinical Terms<span class="reg">&reg;</span>  (SNOMED CT<span class="reg">&reg;</span>) &copy; 2004-2010 International Health Terminology Standards Development Organization.</p>
+  </div>
+
+  <div class="required">
+    <input id="agree_license" type="checkbox" checked={{licenseAgreed}} {{action "toggleLicenseAgreement" on="change"}} />
+    <label class="control-label" for="agree_license">I agree to the above Terms and Conditions of use*</label>
+  </div>
+
+  <div class="form-group row" style="margin-top: 30px">
+    <div class="col-md-6">
+      <div class="links">
+        <p>
+          {{#link-to 'users.password.new'}}
+            <i class="fa fa-question-circle"></i>
+            forgot password?
+          {{/link-to}}
+        </p>
+        <p>
+          {{#link-to 'users.sign-in'}}
+            <i class="fa fa-plus-circle"></i>
+            sign in
+          {{/link-to}}
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-xs-6">
+          {{#link-to 'index' classNames="btn btn-default btn-block btn-lg"}}Cancel{{/link-to}}
+        </div>
+        <div class="col-xs-6">
+          <input class="btn btn-primary btn-block btn-lg" disabled={{submitBtnDisabled}} type="submit" value="REGISTER" />
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
